@@ -1,0 +1,251 @@
+{
+  "kind": "build_request",
+  "title": "Interactive Prisoner’s Dilemma (Business Strategy) educational website",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a responsive single-page Prisoner’s Dilemma educational website with clear navigation to the following sections: Hero, Concepts, Payoff Matrix, Simulation, Dashboard, Business Applications, Insights & Analysis, and an optional Business Analytics Mode.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Create a fully interactive educational website based on the Prisoner's Dilemma from Game Theory, designed specifically for a BBA course in Strategic Game Theory.",
+          "The website should focus on business strategy interpretation, not just technical simulation.",
+          "WEBSITE STRUCTURE"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page renders as a coherent, responsive layout on mobile and desktop",
+        "Navigation (top nav or side nav) scrolls/jumps to each named section",
+        "All sections listed in the requirement are present with headings and readable content"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Apply a consistent professional business-style visual theme (colors, typography, spacing, component styling) across the site, avoiding a blue/purple primary palette. Use a clean corporate look suitable for a BBA presentation, with subtle animations/transitions.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Professional, business-style theme",
+          "Clean UI (corporate look)",
+          "Simple animations"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Theme is applied consistently across all sections (headings, cards, buttons, charts)",
+        "Primary palette is not blue/purple-dominant",
+        "Animations are subtle (e.g., section reveal, hover states) and do not impede usability"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement the Concept Explanation section that clearly explains: two players (Firm A and Firm B), two actions (Cooperate = maintain high prices; Defect = undercut), what payoffs represent (profit outcomes), dominant strategy, Nash equilibrium, and why both firms end up defecting in the one-shot game.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Concept Explanation Section",
+          "Explain clearly: Two players (Firm A & Firm B)",
+          "Explain: Dominant strategy, Nash Equilibrium, Why both firms end up defecting"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Section includes explicit definitions of Dominant Strategy and Nash Equilibrium",
+        "Text uses business framing (prices/profits) and remains non-technical",
+        "Firm A/Firm B naming is used consistently"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Create an interactive Payoff Matrix module with default payoffs: (3,3), (0,5), (5,0), (1,1). Provide UI controls (sliders or numeric inputs) to adjust all payoff values. Automatically detect and highlight any dominant strategies and at least one Nash equilibrium (pure strategy, if present), and show a dynamic explanation box that updates when payoffs change.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Interactive Payoff Matrix",
+          "Sliders to adjust payoff values",
+          "Automatic detection and highlighting of: Dominant strategy, Nash equilibrium",
+          "Explanation box updating dynamically: “Defection is the dominant strategy because…”"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can modify all 8 payoff numbers (A and B payoffs for each cell) via UI controls",
+        "Matrix visually highlights detected dominant strategy(ies) and Nash equilibrium cell(s) when applicable",
+        "Explanation text updates immediately after any payoff change and remains understandable in business terms"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement a simulation engine supporting: one-shot game and repeated game (1–100 rounds). Allow users to select strategies for Firm A and Firm B from: Always Cooperate, Always Defect, Tit-for-Tat, Random, Grim Trigger. Each round must reveal both decisions simultaneously, display round payoff, and update cumulative profit for each firm.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Simulation Section",
+          "Game Modes: One-shot game; Repeated game (1–100 rounds)",
+          "Choose AI strategies: Always Cooperate, Always Defect, Tit-for-Tat, Random, Grim Trigger",
+          "Each round should: Reveal both decisions simultaneously; Show payoff earned; Update cumulative profit"
+        ]
+      },
+      "acceptanceCriteria": [
+        "User can choose game mode (one-shot or repeated) and set rounds within 1–100 for repeated mode",
+        "User can select a strategy for Firm A and for Firm B from the specified list",
+        "Simulation produces a per-round action pair (A action, B action) and computes payoffs from the current payoff matrix",
+        "Cumulative profits update correctly and match the sum of round payoffs"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Add a real-time Visualization Dashboard that updates during simulation: (1) line chart for cumulative profit of both firms over rounds, (2) cooperation rate percentage (overall and/or per firm), (3) round-by-round history table (round number, actions, payoffs, cumulative totals), and (4) a strategy comparison visualization (e.g., per-round actions or cooperation frequency by firm).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Visualization Dashboard",
+          "Line chart for cumulative profit",
+          "Cooperation rate percentage",
+          "Round-by-round history table",
+          "Strategy comparison graph",
+          "Charts must update in real time"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Charts/tables update as rounds progress (or immediately after completing a one-shot) without page reload",
+        "Cumulative profit line chart shows two series (Firm A, Firm B) across rounds",
+        "History table lists each round with actions and payoffs",
+        "Dashboard shows a cooperation rate metric as a percentage"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Create a Business Application section explaining real-world parallels (oligopoly pricing wars, cartel instability, airline price competition, telecom price undercutting) and connecting them to why firms fail to cooperate, the role of trust, repeated interaction effects, and long-term strategy.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Business Application Section",
+          "Add a section explaining real-world parallels: Oligopoly pricing wars, Cartel instability, Airline price competition, Telecom price undercutting",
+          "Explain: Why firms fail to cooperate, Role of trust, Impact of repeated interactions, Importance of long-term strategy"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Section includes all four listed real-world parallels",
+        "Section explicitly ties repeated interactions to the possibility of cooperation",
+        "Language stays business-focused and presentation-ready"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "After a simulation ends (or after one-shot resolves), display an Insights & Analysis panel including: identified Nash equilibrium (based on the current payoff matrix), total profits comparison, whether cooperation was sustained (for repeated games), and a concise strategic interpretation similar in tone to the provided example.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Insights & Analysis Section",
+          "After simulation ends, display: Nash Equilibrium identified, Total profits comparison, Whether cooperation sustained, Strategic interpretation",
+          "Example output: “In a one-shot game, rational firms choose to defect, leading to lower collective profit. However, in repeated interaction, cooperation can emerge.”"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Insights appear when the simulation completes (or immediately for one-shot)",
+        "Panel includes all four required insight items",
+        "Strategic interpretation is generated from the run’s results and remains readable for a BBA viva"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Add an optional toggle called “Business Analytics Mode” that, when enabled, shows: a payoff heatmap, expected value calculations, risk analysis, and a comparison view of one-shot vs repeated results.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Advanced Toggle (Optional but Recommended)",
+          "Add a toggle: “Business Analytics Mode”",
+          "This should display: Payoff heatmap, Expected value calculation, Risk analysis, Comparison of one-shot vs repeated results"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Toggle exists and can be turned on/off without resetting unrelated UI state",
+        "When enabled, the specified analytics elements are visible; when disabled, they are hidden",
+        "Expected value and risk metrics are computed from defined probabilities/assumptions that are shown in the UI (no hidden magic)"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Implement the core game logic in the Motoko backend actor with stable storage for any saved simulation runs (if saving is implemented), and expose Candid methods for: reading/updating the payoff matrix, running one-shot, and running repeated simulations. The frontend must call the backend for simulation results and render them.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "TECHNICAL REQUIREMENTS",
+          "Modular components: Game Engine, Payoff Calculator, Strategy Logic, Visualization Module",
+          "Proper state management",
+          "Clean, readable code"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend provides callable methods to run simulations using the selected strategies and current payoff matrix",
+        "Frontend uses backend responses as the source of truth for simulation outcomes (actions, payoffs, totals)",
+        "If any persistence is added, it survives canister upgrade via stable variables (migration file only if needed)"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Structure the frontend code into modular components that mirror: Payoff Matrix, Simulation Controls, Game Engine adapter (API client), Visualization components, and Insights panels. Add concise comments for strategy logic and payoff computation to support academic explanation.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Modular components: Game Engine, Payoff Calculator, Strategy Logic, Visualization Module",
+          "Comments explaining logic",
+          "Clean, readable code"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Frontend code is split into focused components (no single massive component for the entire app)",
+        "Strategy logic and payoff calculations have brief explanatory comments",
+        "State flow is predictable and does not require editing any immutable template hook paths"
+      ]
+    }
+  ],
+  "constraints": [
+    "Use only the provided stack: Motoko backend (single actor) and React+TypeScript frontend with Tailwind + React Query.",
+    "Do not edit any files under frontend/src/components/ui or any other frontend immutable paths listed in SYSTEM_CONTEXT; compose those components instead.",
+    "Keep all Motoko logic in a single actor (backend/main.mo); only introduce backend/migration.mo if stable state upgrades require it.",
+    "Use English for all user-facing text."
+  ],
+  "nonGoals": [
+    "Third-party authentication providers (only Internet Identity is supported, but it is not required unless explicitly requested).",
+    "Real-time features using WebSockets/push notifications.",
+    "External databases or non-Internet-Computer backend services.",
+    "Overly technical or math-heavy exposition beyond what’s needed for a business-focused BBA presentation."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

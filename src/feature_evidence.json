@@ -1,0 +1,225 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-responsive-single-page-prisoner-s-dilemma-educational-website-with-clear-navigation-to-the-following-sections-hero-concepts-payoff-matrix-simulation-dashboard-business-applications-insights-analysis-and-an-optional-business-analytics-mode",
+      "featureTitle": "Create a responsive single-page Prisoner’s Dilemma educational website with clear navigation to the following sections: Hero, Concepts, Payoff Matrix, Simulation, Dashboard, Business Applications, Insights & Analysis, and an optional Business Analytics Mode.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/layout/TopNav.tsx",
+        "frontend/src/main.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-consistent-professional-business-style-visual-theme-colors-typography-spacing-component-styling-across-the-site-avoiding-a-blue-purple-primary-palette-use-a-clean-corporate-look-suitable-for-a-bba-presentation-with-subtle-animations-transitions",
+      "featureTitle": "Apply a consistent professional business-style visual theme (colors, typography, spacing, component styling) across the site, avoiding a blue/purple primary palette. Use a clean corporate look suitable for a BBA presentation, with subtle animations/transitions.",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-concept-explanation-section-that-clearly-explains-two-players-firm-a-and-firm-b-two-actions-cooperate-maintain-high-prices-defect-undercut-what-payoffs-represent-profit-outcomes-dominant-strategy-nash-equilibrium-and-why-both-firms-end-up-defecting-in-the-one-shot-game",
+      "featureTitle": "Implement the Concept Explanation section that clearly explains: two players (Firm A and Firm B), two actions (Cooperate = maintain high prices; Defect = undercut), what payoffs represent (profit outcomes), dominant strategy, Nash equilibrium, and why both firms end up defecting in the one-shot game.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/features/content/ConceptsSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-an-interactive-payoff-matrix-module-with-default-payoffs-3-3-0-5-5-0-1-1-provide-ui-controls-sliders-or-numeric-inputs-to-adjust-all-payoff-values-automatically-detect-and-highlight-any-dominant-strategies-and-at-least-one-nash-equilibrium-pure-strategy-if-present-and-show-a-dynamic-explanation-box-that-updates-when-payoffs-change",
+      "featureTitle": "Create an interactive Payoff Matrix module with default payoffs: (3,3), (0,5), (5,0), (1,1). Provide UI controls (sliders or numeric inputs) to adjust all payoff values. Automatically detect and highlight any dominant strategies and at least one Nash equilibrium (pure strategy, if present), and show a dynamic explanation box that updates when payoffs change.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/features/payoff/PayoffMatrixSection.tsx",
+        "frontend/src/features/payoff/payoffAnalysis.ts",
+        "frontend/src/features/payoff/usePayoffMatrix.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-simulation-engine-supporting-one-shot-game-and-repeated-game-1-100-rounds-allow-users-to-select-strategies-for-firm-a-and-firm-b-from-always-cooperate-always-defect-tit-for-tat-random-grim-trigger-each-round-must-reveal-both-decisions-simultaneously-display-round-payoff-and-update-cumulative-profit-for-each-firm",
+      "featureTitle": "Implement a simulation engine supporting: one-shot game and repeated game (1–100 rounds). Allow users to select strategies for Firm A and Firm B from: Always Cooperate, Always Defect, Tit-for-Tat, Random, Grim Trigger. Each round must reveal both decisions simultaneously, display round payoff, and update cumulative profit for each firm.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/features/simulation/SimulationSection.tsx",
+        "frontend/src/features/simulation/strategies.ts",
+        "frontend/src/features/state/useGameStore.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-real-time-visualization-dashboard-that-updates-during-simulation-1-line-chart-for-cumulative-profit-of-both-firms-over-rounds-2-cooperation-rate-percentage-overall-and-or-per-firm-3-round-by-round-history-table-round-number-actions-payoffs-cumulative-totals-and-4-a-strategy-comparison-visualization-e-g-per-round-actions-or-cooperation-frequency-by-firm",
+      "featureTitle": "Add a real-time Visualization Dashboard that updates during simulation: (1) line chart for cumulative profit of both firms over rounds, (2) cooperation rate percentage (overall and/or per firm), (3) round-by-round history table (round number, actions, payoffs, cumulative totals), and (4) a strategy comparison visualization (e.g., per-round actions or cooperation frequency by firm).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/features/dashboard/CumulativeProfitChart.tsx",
+        "frontend/src/features/dashboard/DashboardSection.tsx",
+        "frontend/src/features/dashboard/RoundsHistoryTable.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-business-application-section-explaining-real-world-parallels-oligopoly-pricing-wars-cartel-instability-airline-price-competition-telecom-price-undercutting-and-connecting-them-to-why-firms-fail-to-cooperate-the-role-of-trust-repeated-interaction-effects-and-long-term-strategy",
+      "featureTitle": "Create a Business Application section explaining real-world parallels (oligopoly pricing wars, cartel instability, airline price competition, telecom price undercutting) and connecting them to why firms fail to cooperate, the role of trust, repeated interaction effects, and long-term strategy.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/features/content/BusinessApplicationsSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-after-a-simulation-ends-or-after-one-shot-resolves-display-an-insights-analysis-panel-including-identified-nash-equilibrium-based-on-the-current-payoff-matrix-total-profits-comparison-whether-cooperation-was-sustained-for-repeated-games-and-a-concise-strategic-interpretation-similar-in-tone-to-the-provided-example",
+      "featureTitle": "After a simulation ends (or after one-shot resolves), display an Insights & Analysis panel including: identified Nash equilibrium (based on the current payoff matrix), total profits comparison, whether cooperation was sustained (for repeated games), and a concise strategic interpretation similar in tone to the provided example.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/features/insights/InsightsSection.tsx",
+        "frontend/src/features/insights/interpretation.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-an-optional-toggle-called-business-analytics-mode-that-when-enabled-shows-a-payoff-heatmap-expected-value-calculations-risk-analysis-and-a-comparison-view-of-one-shot-vs-repeated-results",
+      "featureTitle": "Add an optional toggle called “Business Analytics Mode” that, when enabled, shows: a payoff heatmap, expected value calculations, risk analysis, and a comparison view of one-shot vs repeated results.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/features/analytics/BusinessAnalyticsMode.tsx",
+        "frontend/src/features/analytics/analyticsMath.ts",
+        "frontend/src/features/state/useGameStore.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-core-game-logic-in-the-motoko-backend-actor-with-stable-storage-for-any-saved-simulation-runs-if-saving-is-implemented-and-expose-candid-methods-for-reading-updating-the-payoff-matrix-running-one-shot-and-running-repeated-simulations-the-frontend-must-call-the-backend-for-simulation-results-and-render-them",
+      "featureTitle": "Implement the core game logic in the Motoko backend actor with stable storage for any saved simulation runs (if saving is implemented), and expose Candid methods for: reading/updating the payoff matrix, running one-shot, and running repeated simulations. The frontend must call the backend for simulation results and render them.",
+      "files": [
+        "frontend/src/features/payoff/usePayoffMatrix.ts",
+        "frontend/src/features/simulation/SimulationSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-structure-the-frontend-code-into-modular-components-that-mirror-payoff-matrix-simulation-controls-game-engine-adapter-api-client-visualization-components-and-insights-panels-add-concise-comments-for-strategy-logic-and-payoff-computation-to-support-academic-explanation",
+      "featureTitle": "Structure the frontend code into modular components that mirror: Payoff Matrix, Simulation Controls, Game Engine adapter (API client), Visualization components, and Insights panels. Add concise comments for strategy logic and payoff computation to support academic explanation.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/features/content/HeroSection.tsx",
+        "frontend/src/features/prisonersDilemma/PrisonersDilemmaPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

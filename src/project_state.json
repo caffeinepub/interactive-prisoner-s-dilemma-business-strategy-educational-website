@@ -1,0 +1,156 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build an interactive, business-focused Prisoner’s Dilemma educational website for a BBA Strategic Game Theory assignment, including payoff matrix editing, one-shot and repeated-game simulations, real-time visualizations, and business insights/analysis.",
+  "architectural_notes": [
+    "Modularize implementation into Game Engine, Payoff Calculator, Strategy Logic, and Visualization module with clear state management."
+  ],
+  "known_issues": [
+    "Initial build attempt failed due to overly complex prompt; needs simplified/rephrased implementation approach."
+  ],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-single-page-prisoner-s-dilemma-educational-website-with-clear-navigation-to-the-following-sections-hero-concepts-payoff-matrix-simulation-dashboard-business-applications-insights-analysis-and-an-optional-business-analytics-mode",
+      "title": "Create a responsive single-page Prisoner’s Dilemma educational website with clear navigation to the following sections: Hero, Concepts, Payoff Matrix, Simulation, Dashboard, Business Applications, Insights & Analysis, and an optional Business Analytics Mode.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-consistent-professional-business-style-visual-theme-colors-typography-spacing-component-styling-across-the-site-avoiding-a-blue-purple-primary-palette-use-a-clean-corporate-look-suitable-for-a-bba-presentation-with-subtle-animations-transitions",
+      "title": "Apply a consistent professional business-style visual theme (colors, typography, spacing, component styling) across the site, avoiding a blue/purple primary palette. Use a clean corporate look suitable for a BBA presentation, with subtle animations/transitions.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-concept-explanation-section-that-clearly-explains-two-players-firm-a-and-firm-b-two-actions-cooperate-maintain-high-prices-defect-undercut-what-payoffs-represent-profit-outcomes-dominant-strategy-nash-equilibrium-and-why-both-firms-end-up-defecting-in-the-one-shot-game",
+      "title": "Implement the Concept Explanation section that clearly explains: two players (Firm A and Firm B), two actions (Cooperate = maintain high prices; Defect = undercut), what payoffs represent (profit outcomes), dominant strategy, Nash equilibrium, and why both firms end up defecting in the one-shot game.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-an-interactive-payoff-matrix-module-with-default-payoffs-3-3-0-5-5-0-1-1-provide-ui-controls-sliders-or-numeric-inputs-to-adjust-all-payoff-values-automatically-detect-and-highlight-any-dominant-strategies-and-at-least-one-nash-equilibrium-pure-strategy-if-present-and-show-a-dynamic-explanation-box-that-updates-when-payoffs-change",
+      "title": "Create an interactive Payoff Matrix module with default payoffs: (3,3), (0,5), (5,0), (1,1). Provide UI controls (sliders or numeric inputs) to adjust all payoff values. Automatically detect and highlight any dominant strategies and at least one Nash equilibrium (pure strategy, if present), and show a dynamic explanation box that updates when payoffs change.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-simulation-engine-supporting-one-shot-game-and-repeated-game-1-100-rounds-allow-users-to-select-strategies-for-firm-a-and-firm-b-from-always-cooperate-always-defect-tit-for-tat-random-grim-trigger-each-round-must-reveal-both-decisions-simultaneously-display-round-payoff-and-update-cumulative-profit-for-each-firm",
+      "title": "Implement a simulation engine supporting: one-shot game and repeated game (1–100 rounds). Allow users to select strategies for Firm A and Firm B from: Always Cooperate, Always Defect, Tit-for-Tat, Random, Grim Trigger. Each round must reveal both decisions simultaneously, display round payoff, and update cumulative profit for each firm.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-real-time-visualization-dashboard-that-updates-during-simulation-1-line-chart-for-cumulative-profit-of-both-firms-over-rounds-2-cooperation-rate-percentage-overall-and-or-per-firm-3-round-by-round-history-table-round-number-actions-payoffs-cumulative-totals-and-4-a-strategy-comparison-visualization-e-g-per-round-actions-or-cooperation-frequency-by-firm",
+      "title": "Add a real-time Visualization Dashboard that updates during simulation: (1) line chart for cumulative profit of both firms over rounds, (2) cooperation rate percentage (overall and/or per firm), (3) round-by-round history table (round number, actions, payoffs, cumulative totals), and (4) a strategy comparison visualization (e.g., per-round actions or cooperation frequency by firm).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-business-application-section-explaining-real-world-parallels-oligopoly-pricing-wars-cartel-instability-airline-price-competition-telecom-price-undercutting-and-connecting-them-to-why-firms-fail-to-cooperate-the-role-of-trust-repeated-interaction-effects-and-long-term-strategy",
+      "title": "Create a Business Application section explaining real-world parallels (oligopoly pricing wars, cartel instability, airline price competition, telecom price undercutting) and connecting them to why firms fail to cooperate, the role of trust, repeated interaction effects, and long-term strategy.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-after-a-simulation-ends-or-after-one-shot-resolves-display-an-insights-analysis-panel-including-identified-nash-equilibrium-based-on-the-current-payoff-matrix-total-profits-comparison-whether-cooperation-was-sustained-for-repeated-games-and-a-concise-strategic-interpretation-similar-in-tone-to-the-provided-example",
+      "title": "After a simulation ends (or after one-shot resolves), display an Insights & Analysis panel including: identified Nash equilibrium (based on the current payoff matrix), total profits comparison, whether cooperation was sustained (for repeated games), and a concise strategic interpretation similar in tone to the provided example.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-optional-toggle-called-business-analytics-mode-that-when-enabled-shows-a-payoff-heatmap-expected-value-calculations-risk-analysis-and-a-comparison-view-of-one-shot-vs-repeated-results",
+      "title": "Add an optional toggle called “Business Analytics Mode” that, when enabled, shows: a payoff heatmap, expected value calculations, risk analysis, and a comparison view of one-shot vs repeated results.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-core-game-logic-in-the-motoko-backend-actor-with-stable-storage-for-any-saved-simulation-runs-if-saving-is-implemented-and-expose-candid-methods-for-reading-updating-the-payoff-matrix-running-one-shot-and-running-repeated-simulations-the-frontend-must-call-the-backend-for-simulation-results-and-render-them",
+      "title": "Implement the core game logic in the Motoko backend actor with stable storage for any saved simulation runs (if saving is implemented), and expose Candid methods for: reading/updating the payoff matrix, running one-shot, and running repeated simulations. The frontend must call the backend for simulation results and render them.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-structure-the-frontend-code-into-modular-components-that-mirror-payoff-matrix-simulation-controls-game-engine-adapter-api-client-visualization-components-and-insights-panels-add-concise-comments-for-strategy-logic-and-payoff-computation-to-support-academic-explanation",
+      "title": "Structure the frontend code into modular components that mirror: Payoff Matrix, Simulation Controls, Game Engine adapter (API client), Visualization components, and Insights panels. Add concise comments for strategy logic and payoff computation to support academic explanation.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create professional, responsive website structure with hero section, navigation, and business-style UI theme for Prisoner’s Dilemma content",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add concept explanation sections covering dominant strategy, Nash equilibrium, individual vs collective outcomes, and business examples (price wars, advertising, oligopoly, trade agreements)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Implement interactive payoff matrix with adjustable payoff values and dynamic highlighting of dominant strategies and Nash equilibrium plus an updating explanation box",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Implement simulation engine for one-shot and repeated games (1–100 rounds) with selectable strategies for Firm A/Firm B and AI strategies (Always Cooperate/Defect, Tit-for-Tat, Random, Grim Trigger)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Create real-time visualization dashboard: cumulative profit line chart, cooperation rate, round history table, and strategy comparison graph",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add post-simulation insights & analysis output (equilibrium identified, profit comparison, cooperation sustainability, strategic interpretation)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Add optional 'Business Analytics Mode' toggle with payoff heatmap, expected value, risk analysis, and one-shot vs repeated comparison",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Define modular architecture (game engine, payoff calculator, strategy logic, visualization module) with clean state management and commented, readable code",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Interactive Prisoner’s Dilemma (Business Strategy) educational website",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

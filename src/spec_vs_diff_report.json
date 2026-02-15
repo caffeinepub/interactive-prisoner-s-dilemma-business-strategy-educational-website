@@ -1,0 +1,102 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-15T17:32:55.264Z",
+  "summary": "Diff adds a Motoko backend actor with payoff matrix CRUD and simulation endpoints, plus a React SPA with navigation and sections for hero, concepts, payoff matrix, simulation, dashboard, applications, insights, and an analytics mode feature. However, several key requirements are only partially implemented, especially strategy logic in the backend, Business Analytics Mode toggle behavior, and required business parallels.",
+  "missing_requirements": [
+    {
+      "id": "REQ-5",
+      "requirement": "Simulation engine must support one-shot and repeated games (1–100 rounds) with selectable strategies for Firm A and Firm B: Always Cooperate, Always Defect, Tit-for-Tat, Random, Grim Trigger. Each round should compute decisions according to the selected strategies and update round/cumulative payoffs.",
+      "reason": "Backend simulation currently treats strategies as a simple string equality check against \"Cooperate\" for every round; it does not implement Tit-for-Tat/Random/Grim Trigger logic, nor does it vary decisions round-to-round based on history.",
+      "evidence": [
+        "backend/main.mo (runOneShot uses `strategyA == \"Cooperate\"`; runRepeatedGame uses same per-round check)",
+        "frontend/src/features/simulation/strategies.ts (lists strategies but no evidence they are implemented in backend)"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "requirement": "Provide an optional toggle called “Business Analytics Mode” that can be turned on/off without resetting unrelated UI state; when enabled it shows payoff heatmap, expected value calculations, risk analysis, and a one-shot vs repeated comparison view. Assumptions/probabilities must be shown in UI.",
+      "reason": "The toggle UI is inside `BusinessAnalyticsMode`, but `PrisonersDilemmaPage` only renders `BusinessAnalyticsMode` when `analyticsMode` is already true, making it impossible (from the provided code) to turn analytics mode on from the default state. Also, the shown expected value uses fixed 0.5/0.5 probabilities with no visible UI controls/assumptions display in the provided snippet, and no evidence of a one-shot vs repeated comparison view.",
+      "evidence": [
+        "frontend/src/features/prisonersDilemma/PrisonersDilemmaPage.tsx (`{analyticsMode && <BusinessAnalyticsMode />}` gating)",
+        "frontend/src/features/analytics/BusinessAnalyticsMode.tsx (toggle exists but component gated; expected value called with 0.5,0.5)"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "requirement": "Business Application section must include real-world parallels: oligopoly pricing wars, cartel instability, airline price competition, telecom price undercutting, and tie repeated interactions to possibility of cooperation.",
+      "reason": "The section includes oligopoly pricing wars, airline price competition, and telecom price undercutting, but the provided content shows an \"Advertising Competition\" card instead of the required \"cartel instability\" parallel (and the remainder is truncated, so cartel instability is not evidenced).",
+      "evidence": [
+        "frontend/src/features/content/BusinessApplicationsSection.tsx (shows Oligopoly Pricing Wars, Advertising Competition, Airline Price Competition, Telecom Price Undercutting)"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "requirement": "Backend core game logic should be in a single actor and use stable storage for saved simulation runs (if saving is implemented). Frontend must call backend for simulation results and render them as source of truth.",
+      "reason": "Saving is implemented via `simulationHistory.add(result)` but `simulationHistory` is not declared as `stable`, so it would not survive upgrades. Also, evidence that the frontend uses backend responses as the source of truth for simulation outcomes is incomplete because the API adapter (`useSimulation`) is not shown in the diff summary (truncated/omitted files).",
+      "evidence": [
+        "backend/main.mo (`let simulationHistory = List.empty<SimulationResult>();` and later `simulationHistory.add(result);`)",
+        "frontend/src/features/simulation/SimulationSection.tsx (calls `useSimulation()` but implementation not shown)"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Footer includes a promotional outbound link to caffeine.ai (with UTM parameters) and a heart icon.",
+      "reason": "Not requested by the BuildRequest; adds third-party branding/attribution link.",
+      "evidence": [
+        "frontend/src/components/layout/Footer.tsx"
+      ]
+    },
+    {
+      "description": "Business Applications section includes an \"Advertising Competition\" parallel.",
+      "reason": "REQ-7 specified four particular business parallels (oligopoly pricing wars, cartel instability, airline price competition, telecom price undercutting); advertising competition was not requested as one of the required parallels.",
+      "evidence": [
+        "frontend/src/features/content/BusinessApplicationsSection.tsx"
+      ]
+    },
+    {
+      "description": "Backend exposes `getSimulationHistory()` endpoint.",
+      "reason": "BuildRequest did not request a simulation history retrieval API (only reading/updating payoff matrix, running one-shot, and running repeated simulations).",
+      "evidence": [
+        "backend/main.mo (public query func getSimulationHistory)"
+      ]
+    }
+  ],
+  "confidence": 0.72,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/layout/Footer.tsx",
+    "frontend/src/components/layout/TopNav.tsx",
+    "frontend/src/features/analytics/BusinessAnalyticsMode.tsx",
+    "frontend/src/features/analytics/analyticsMath.ts",
+    "frontend/src/features/content/BusinessApplicationsSection.tsx",
+    "frontend/src/features/content/ConceptsSection.tsx",
+    "frontend/src/features/content/HeroSection.tsx",
+    "frontend/src/features/dashboard/CumulativeProfitChart.tsx",
+    "frontend/src/features/dashboard/DashboardSection.tsx",
+    "frontend/src/features/dashboard/RoundsHistoryTable.tsx",
+    "frontend/src/features/insights/InsightsSection.tsx",
+    "frontend/src/features/insights/interpretation.ts",
+    "frontend/src/features/payoff/PayoffMatrixSection.tsx",
+    "frontend/src/features/payoff/payoffAnalysis.ts",
+    "frontend/src/features/payoff/usePayoffMatrix.ts",
+    "frontend/src/features/prisonersDilemma/PrisonersDilemmaPage.tsx",
+    "frontend/src/features/simulation/SimulationSection.tsx",
+    "frontend/src/features/simulation/strategies.ts",
+    "frontend/src/features/simulation/useSimulation.ts",
+    "frontend/src/features/state/useGameStore.ts",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}
